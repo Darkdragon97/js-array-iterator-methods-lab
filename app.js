@@ -95,49 +95,50 @@ let veryOldInventors = inventors.filter((inventor) => {
 console.log(veryOldInventors)
 
 // Exercise 2:
-// let inventorNames = inventors.map((inventor) => {
-//   return (inventor.Name = 'first' && 'last')
-// })
-// console.log(inventorNames)
+let inventorNames = inventors.map((inventor) => {
+  return { first: inventor.first, last: inventor.last }
+})
+console.log(inventorNames)
 
 // Exercise 3:
-// let sortedByBirthYear = inventors.sort((inventor) => {
-//   return invantor
-// })
-// console.log(sortedByBirthYear)
+let sortedByBirthYear = inventors.sort((a, b) => {
+  return a.year - b.year
+})
+console.log(sortedByBirthYear)
 
 // Exercise 4:
-// let invantorNamedAda = inventors.find((invantor) => {
-//   return
-// })
-// console.log(invantorNamedAda)
+let invantorNamedAda = inventors.find((invantor) => {
+  return invantor.first === 'Ada'
+})
+console.log(invantorNamedAda)
 
 // Exercise 5:
-// let firstLast = inventors.map((invantor) => {
-//   return
-// })
-// console.log(firstLast)
+let firstLast = people.map((name) => {
+  let [last, first] = name.split(',')
+  return `${first} ${last}`
+})
+console.log(firstLast)
 
 // Exercise 6:
-// let isAdultPresent = inventors.some((invantor) => {
-//   return
-// })
-// console.log(isAdultPresent)
+let isAdultPresent = devs.some((dev) => {
+  return dev.year >= 18
+})
+console.log(isAdultPresent)
 
 // Exercise 7:
-// let isEveryone190OrOlder = inventors.every((invantor) => {
-//   return
-// })
-// console.log(isEveryone190OrOlder)
+let isEveryone190OrOlder = devs.every((dev) => {
+  return 2024 - dev.year >= 19
+})
+console.log(isEveryone190OrOlder)
 
 // Exercise 8:
-// let commentById = comments.find((comment) => {
-//   return comment
-// })
-// console.log(commentById)
+let commentById = comments.find((comment) => {
+  return comment.id === 823423
+})
+console.log(commentById)
 
 // Exercise 9:
-// let idx = comments.findIndex((comment) => {
-//   return
-// })
-// console.log(idx)
+let idx = comments.findIndex((comment) => {
+  return comment.id === 123523
+})
+console.log(idx)
