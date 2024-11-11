@@ -142,3 +142,20 @@ let idx = comments.findIndex((comment) => {
   return comment.id === 123523
 })
 console.log(idx)
+
+// Exercise levelup 1:
+let totalYearsLived = inventors.reduce((total, inventor) => {
+  return total + inventor.passed - inventor.year
+}, 0)
+console.log(totalYearsLived)
+
+// Exercise levelup 2:
+let travelMethodCounts = travelMethods.reduce((total, method) => {
+  if (total[method]) {
+    total[method] += 1
+  } else {
+    total[method] = 1
+  }
+  return total
+}, {})
+console.log('Level Up 2 my result: ', travelMethodCounts)
